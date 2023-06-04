@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="/approve_pharmacypost/{{ data['ph_id'] }}" method="post">
+<table width="500" height="254" border="1" cellpadding="1" cellspacing="2">
+  <tr>
+    <th colspan="2" scope="row">PHARMACY</th>
+    </tr>
+    <tr>
+        <th></th>
+        <td><img src="{{ data['photo'] }}" height="80" width="80" alt=""/></td>
+    </tr>
+  <tr>
+    <th width="187" scope="row" align="left">Pharmacy Name:</th>
+    <td width="297">&nbsp;{{ data['ph_name'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">Licence Number:</th>
+    <td>{{ data['licience_no'] }}&nbsp;</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">Phone Number:</th>
+    <td>{{ data['phone_number'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">Place:</th>
+    <td>{{ data['place'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">Post Office:</th>
+    <td>{{ data['post'] }}</td>
+  </tr>
+
+  <tr>
+    <th scope="row" align="left">Pincode:</th>
+    <td>{{ data['pin'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">E-mail:</th>
+    <td>{{ data['email_id'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">Working Time:</th>
+    <td>{{ data['working_time'] }}</td>
+  </tr>
+  <tr>
+    <th colspan="2" valign="middle" scope="row"><input type="submit" name="btn" id="Approve" value="Approve" />
+            <input type="submit" name="btn" id="Reject" value="Reject" /></th>
+    </tr>
+</table>
+
+</form>
+</body>
+</html>

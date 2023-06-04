@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="506" height="85" border="1" cellpadding="1" cellspacing="2">
+  <tr>
+    <th width="44" scope="row">#</th>
+    <td width="107">Medicine Name</td>
+    <td width="75">Incredient:</td>
+    <td width="71"> Quantity</td>
+    <td width="65">Purpose</td>
+    <td width="104">&nbsp;</td>
+  </tr>
+    {% for i in data %}
+
+  <tr>
+    <th scope="row">{{ loop.index }}&nbsp;</th>
+    <td><img src="{{ i['photo'] }}" alt="" height="50" width="40"/>&nbsp;{{ i['Medicine_Name'] }}</td>
+    <td>{{ i['Incrediants'] }}&nbsp;</td>
+    <td>{{ i['Side_effects'] }}&nbsp;</td>
+    <td>{{ i['Purpose'] }}&nbsp;</td>
+    <td><a href="/viewmore_medicine/{{ i['mid'] }}">View more</a></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

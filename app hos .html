@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="/approve_hospitalpost/{{ data['h_id'] }}" method="post">
+<table width="500" height="308" border="1" cellpadding="1" cellspacing="2">
+  <tr>
+    <th colspan="2" scope="row">HOSPITAL</th>
+    </tr>
+  <tr>
+    <th width="153" height="27" scope="row" align="left">Hospital Name:</th>
+    <td width="331"><img src="{{ data['h_photo'] }}" height="80" width="80">{{ data['h_name'] }} </td>
+  </tr>
+  <tr>
+    <th height="25" scope="row" align="left">License Number:</th>
+    <td>{{ data['h_licencenumber'] }}&nbsp;</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">Phone Number:</th>
+    <td>{{ data['h_phonenumber'] }}&nbsp;</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">place:</th>
+    <td>{{ data['h_place'] }}&nbsp;</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">Pincode:</th>
+    <td>{{ data['h_pin'] }}&nbsp;</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">Postoffice:</th>
+    <td>{{ data['h_post'] }}&nbsp;</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">E-mail:</th>
+    <td>{{ data['h_emailid'] }}&nbsp;</td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"><input type="submit" name="abc" id="Approve" value="Approve" />
+      <input type="submit" name="abc" id="Reject" value="Reject" /></th>
+    </tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="570" border="1" cellspacing="2" cellpadding="1">
+  <tr>
+    <th width="30" scope="col">#</th>
+    <th width="106" scope="col">Hospital Name</th>
+    <th width="124" scope="col">License Number</th>
+    <th width="117" scope="col">Phone Number</th>
+    <th width="73" scope="col">&nbsp;</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+   <th>{{ loop.index }}</th>
+    <td><img src="{{ i['h_photo'] }}" height="50" width="50">{{ i['h_name'] }} </td>
+    <td>{{ i['h_licencenumber'] }}&nbsp;</td>
+    <td>{{ i['h_phonenumber'] }}&nbsp;</td>
+    <td><p><a href="/approve_hospital/{{ i['h_id'] }}">view more</a></p>
+    <p>&nbsp;</p></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

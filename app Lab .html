@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="/appove_labpost/{{ data['Lab_id'] }}" method="post">
+<table width="500" border="1" cellspacing="2" cellpadding="1">
+  <tr>
+    <th colspan="2" scope="row">LABORATARY</th>
+    </tr>
+  <tr>
+    <th width="191" scope="row" align="left">Lab Name:</th>
+    <td width="293">&nbsp;{{ data['L_name'] }}<img src="{{ data['photo'] }}" alt="" height="50" width="50"/>&nbsp;</td>
+  </tr>
+  </tr>
+  <tr>
+    <th scope="row" align="left">License Number:</th>
+    <td>{{ data['L_licencenumber'] }}&nbsp;</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">place:</th>
+    <td>{{ data['L_place']  }}&nbsp;</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">Post Office:</th>
+    <td>{{ data['L_post'] }}&nbsp;</td>
+  </tr>
+    <tr>
+    <th scope="row" align="left">District:</th>
+    <td>&nbsp;{{ data['L_district'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row" align="left">Pincode:</th>
+    <td>{{ data['L_pincode'] }}&nbsp;</td>
+  </tr>
+
+  <tr>
+    <th scope="row" align="left">E-mail:</th>
+    <td>&nbsp;{{ data['L_emailid'] }}</td>
+  </tr>
+
+  <tr>
+    <th scope="row" align="left">Working Time:</th>
+    <td>{{ data['L_workingtime'] }}&nbsp;</td>
+  </tr>
+
+  <tr>
+    <th colspan="2" scope="row"><input type="submit" name="ab" id="Approve" value="Approve" />
+      <input type="submit" name="ab" id="Reject" value="Reject" /></th>
+    </tr>
+</table>
+</form>
+</body>
+</html>
